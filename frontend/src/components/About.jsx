@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { photos } from "../mock";
 
 export default function About() {
   return (
@@ -8,8 +9,8 @@ export default function About() {
         <div className="lg:col-span-5 relative">
           <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-[0_24px_60px_-25px_rgba(31,49,68,0.35)]">
             <img
-              src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=1000&auto=format&fit=crop&q=80"
-              alt="Veterinária"
+              src={photos.whiteDog}
+              alt="Veterinária Ari"
               className="w-full h-full object-cover"
             />
           </div>

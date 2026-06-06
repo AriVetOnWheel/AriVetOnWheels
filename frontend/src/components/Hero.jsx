@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowRight, PawPrint, Phone } from "lucide-react";
-import { brand } from "../mock";
+import { brand, photos } from "../mock";
 
 export default function Hero({ onBook }) {
   return (
@@ -40,9 +40,9 @@ export default function Hero({ onBook }) {
           <div className="mt-10 flex items-center gap-6">
             <div className="flex -space-x-2">
               {[
-                { id: "a1", src: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=80" },
-                { id: "a2", src: "https://images.pexels.com/photos/7469231/pexels-photo-7469231.jpeg?w=80" },
-                { id: "a3", src: "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?w=80" },
+                { id: "a1", src: photos.yorkshire },
+                { id: "a2", src: photos.pinkBulldog },
+                { id: "a3", src: photos.whiteDog },
               ].map((a) => (
                 <img key={a.id} src={a.src} alt="" className="w-9 h-9 rounded-full border-2 border-[#FFFBF4] object-cover" />
               ))}
@@ -58,8 +58,8 @@ export default function Hero({ onBook }) {
         <div className="lg:col-span-6 relative">
           <div className="relative aspect-[4/5] sm:aspect-[5/5] lg:aspect-[4/5] rounded-[2rem] overflow-hidden shadow-[0_30px_70px_-25px_rgba(99,153,189,0.45)]">
             <img
-              src="https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?w=1200&auto=format&fit=crop&q=80"
-              alt="Veterinário cuidando de gato em casa"
+              src={photos.yorkshire}
+              alt="Veterinária Ari com cão"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1f3144]/30 via-transparent to-transparent" />

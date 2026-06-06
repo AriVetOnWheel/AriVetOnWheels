@@ -1,5 +1,15 @@
 // Mock data for Ari Vet On Wheels
-import { Stethoscope, Syringe, Heart, ShieldCheck, MapPin, Clock, Users, Calendar, Award, Sparkles, MessageCircle, PhoneCall } from "lucide-react";
+import { Stethoscope, Syringe, Heart, ShieldCheck, Sparkles, Calendar, Users, Award } from "lucide-react";
+
+const ASSET_BASE = "https://customer-assets.emergentagent.com/job_mobile-vet-clinic-1/artifacts";
+
+export const photos = {
+  pinkBulldog: `${ASSET_BASE}/vz5ykffm_1000149364.jpg`,
+  yorkshire: `${ASSET_BASE}/ha6nuleg_1000148555.jpg`,
+  whiteDog: `${ASSET_BASE}/o428njd3_1000148554.jpg`,
+  beagle: `${ASSET_BASE}/0chjaxcw_20260520_133014.jpg`,
+  shepherd: `${ASSET_BASE}/3lo30zfy_20260516_151615.jpg`,
+};
 
 export const brand = {
   name: "Ari Vet On Wheels",
@@ -34,21 +44,21 @@ export const reasons = [
     eyebrow: "MENOS ANSIEDADE",
     title: "Sem transporte. Sem sala de espera.",
     desc: "Removemos as duas maiores fontes de stress de uma consulta. O seu animal permanece no espaço onde se sente seguro.",
-    image: "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5",
+    image: photos.pinkBulldog,
   },
   {
     id: "mais-conforto",
     eyebrow: "MAIS CONFORTO",
     title: "O ambiente familiar que eles já conhecem",
     desc: "Em casa, o comportamento é autêntico, os sinais clínicos mais claros, e o tempo da consulta é integralmente do seu animal.",
-    image: "https://images.pexels.com/photos/7469231/pexels-photo-7469231.jpeg",
+    image: photos.beagle,
   },
   {
     id: "atencao-personalizada",
     eyebrow: "ATENÇÃO PERSONALIZADA",
     title: "Uma consulta. Um foco.",
     desc: "Sem agendas sobrepostas. Avaliação clínica detalhada, com o tempo necessário para escutar e explicar.",
-    image: "https://images.pexels.com/photos/6235238/pexels-photo-6235238.jpeg",
+    image: photos.shepherd,
   },
 ];
 
