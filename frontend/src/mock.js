@@ -30,18 +30,21 @@ export const services = [
 
 export const reasons = [
   {
+    id: "menos-ansiedade",
     eyebrow: "MENOS ANSIEDADE",
     title: "Sem transporte. Sem sala de espera.",
     desc: "Removemos as duas maiores fontes de stress de uma consulta. O seu animal permanece no espaço onde se sente seguro.",
     image: "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5",
   },
   {
+    id: "mais-conforto",
     eyebrow: "MAIS CONFORTO",
     title: "O ambiente familiar que eles já conhecem",
     desc: "Em casa, o comportamento é autêntico, os sinais clínicos mais claros, e o tempo da consulta é integralmente do seu animal.",
     image: "https://images.pexels.com/photos/7469231/pexels-photo-7469231.jpeg",
   },
   {
+    id: "atencao-personalizada",
     eyebrow: "ATENÇÃO PERSONALIZADA",
     title: "Uma consulta. Um foco.",
     desc: "Sem agendas sobrepostas. Avaliação clínica detalhada, com o tempo necessário para escutar e explicar.",

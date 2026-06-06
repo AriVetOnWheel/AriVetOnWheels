@@ -28,7 +28,7 @@ export default function HowItWorks({ onBook }) {
             const isOpen = open === i;
             return (
               <div
-                key={i}
+                key={s.n}
                 className={`rounded-2xl border transition-all duration-300 ${
                   isOpen
                     ? "bg-white border-[#6399BD]/40 shadow-[0_18px_40px_-22px_rgba(99,153,189,0.55)]"

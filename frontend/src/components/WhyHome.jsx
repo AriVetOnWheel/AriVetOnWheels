@@ -19,7 +19,7 @@ export default function WhyHome({ onBook }) {
         <div className="space-y-20 md:space-y-28">
           {reasons.map((r, i) => (
             <div
-              key={i}
+              key={r.id}
               className={`grid md:grid-cols-2 gap-10 md:gap-14 items-center ${i % 2 === 1 ? "md:[&>div:first-child]:order-2" : ""}`}
             >
               <div className="relative">

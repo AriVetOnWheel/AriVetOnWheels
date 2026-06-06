@@ -1,7 +1,10 @@
 import React from "react";
 import Logo from "./Logo";
+import FooterSocial from "./footer/FooterSocial";
+import FooterContact from "./footer/FooterContact";
+import FooterSchedule from "./footer/FooterSchedule";
 import { brand } from "../mock";
-import { Phone, Mail, Instagram, MessageCircle, MapPin } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -15,56 +18,15 @@ export default function Footer() {
             <p className="mt-5 text-[#BCD1D8] leading-relaxed max-w-md">
               Veterinários ao domicílio em Sintra, Oeiras, Cascais, Moita, Montijo e Alcochete. Cuidamos do seu animal onde ele se sente em casa.
             </p>
-            <div className="mt-7 flex gap-3">
-              <a href={brand.instagram} target="_blank" rel="noreferrer" className="h-11 w-11 rounded-full bg-[#FFFBF4]/10 hover:bg-[#6399BD] flex items-center justify-center transition-colors" aria-label="Instagram">
-                <Instagram size={18} />
-              </a>
-              <a href={brand.whatsapp} target="_blank" rel="noreferrer" className="h-11 w-11 rounded-full bg-[#FFFBF4]/10 hover:bg-[#6399BD] flex items-center justify-center transition-colors" aria-label="WhatsApp">
-                <MessageCircle size={18} />
-              </a>
-              <a href={`tel:${brand.phoneRaw}`} className="h-11 w-11 rounded-full bg-[#FFFBF4]/10 hover:bg-[#6399BD] flex items-center justify-center transition-colors" aria-label="Telefone">
-                <Phone size={18} />
-              </a>
-            </div>
+            <FooterSocial />
           </div>
 
           <div className="md:col-span-3">
-            <div className="text-[0.7rem] uppercase tracking-[0.22em] text-[#BCD1D8] font-semibold">Contactos</div>
-            <ul className="mt-5 space-y-3.5 text-sm">
-              <li className="flex items-start gap-3">
-                <Phone size={16} className="text-[#FEEABE] shrink-0 mt-0.5" />
-                <a href={`tel:${brand.phoneRaw}`} className="hover:text-[#FEEABE] transition-colors">{brand.phone}</a>
-              </li>
-              <li className="flex items-start gap-3">
-                <MessageCircle size={16} className="text-[#FEEABE] shrink-0 mt-0.5" />
-                <a href={brand.whatsapp} target="_blank" rel="noreferrer" className="hover:text-[#FEEABE] transition-colors">WhatsApp</a>
-              </li>
-              <li className="flex items-start gap-3">
-                <Instagram size={16} className="text-[#FEEABE] shrink-0 mt-0.5" />
-                <a href={brand.instagram} target="_blank" rel="noreferrer" className="hover:text-[#FEEABE] transition-colors">@arivetonwheels</a>
-              </li>
-              <li className="flex items-start gap-3">
-                <Mail size={16} className="text-[#FEEABE] shrink-0 mt-0.5" />
-                <a href={`mailto:${brand.email}`} className="hover:text-[#FEEABE] transition-colors">{brand.email}</a>
-              </li>
-            </ul>
+            <FooterContact />
           </div>
 
           <div className="md:col-span-4">
-            <div className="text-[0.7rem] uppercase tracking-[0.22em] text-[#BCD1D8] font-semibold">Horário</div>
-            <ul className="mt-5 space-y-2.5 text-sm">
-              <li className="flex justify-between"><span className="text-[#BCD1D8]">Segunda a Sexta</span><span>9:00 — 20:30</span></li>
-              <li className="flex justify-between"><span className="text-[#BCD1D8]">Sábado</span><span>9:30 — 18:00</span></li>
-              <li className="flex justify-between"><span className="text-[#BCD1D8]">Dom. e Feriados</span><span>Encerrado</span></li>
-            </ul>
-            <div className="mt-7 text-[0.7rem] uppercase tracking-[0.22em] text-[#BCD1D8] font-semibold">Áreas</div>
-            <div className="mt-3 flex flex-wrap gap-1.5">
-              {brand.areas.map((a) => (
-                <span key={a} className="px-2.5 py-1 rounded-full bg-[#FFFBF4]/10 text-[0.72rem]">
-                  <MapPin size={11} className="inline -mt-0.5 mr-1 text-[#FEEABE]" />{a}
-                </span>
-              ))}
-            </div>
+            <FooterSchedule />
           </div>
         </div>
 
@@ -74,7 +36,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Floating WhatsApp button */}
       <a
         href={brand.whatsapp}
         target="_blank"

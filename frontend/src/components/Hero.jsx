@@ -40,11 +40,11 @@ export default function Hero({ onBook }) {
           <div className="mt-10 flex items-center gap-6">
             <div className="flex -space-x-2">
               {[
-                "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=80",
-                "https://images.pexels.com/photos/7469231/pexels-photo-7469231.jpeg?w=80",
-                "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?w=80",
-              ].map((src, i) => (
-                <img key={i} src={src} alt="" className="w-9 h-9 rounded-full border-2 border-[#FFFBF4] object-cover" />
+                { id: "a1", src: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=80" },
+                { id: "a2", src: "https://images.pexels.com/photos/7469231/pexels-photo-7469231.jpeg?w=80" },
+                { id: "a3", src: "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?w=80" },
+              ].map((a) => (
+                <img key={a.id} src={a.src} alt="" className="w-9 h-9 rounded-full border-2 border-[#FFFBF4] object-cover" />
               ))}
             </div>
             <div className="text-sm text-[#4a6075]">
