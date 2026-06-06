@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #FFFBF4;
+  color: #1f3144;
+}
+
+.font-serif-display {
+  font-family: 'Fraunces', Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+@layer base {
+  :root {
+    --background: 40 60% 98%;
+    --foreground: 210 35% 19%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 35% 19%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 35% 19%;
+    --primary: 204 35% 56%;
+    --primary-foreground: 40 60% 98%;
+    --secondary: 195 25% 79%;
+    --secondary-foreground: 210 35% 19%;
+    --muted: 40 50% 94%;
+    --muted-foreground: 210 15% 45%;
+    --accent: 41 96% 87%;
+    --accent-foreground: 210 35% 19%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 195 25% 85%;
+    --input: 195 25% 88%;
+    --ring: 204 35% 56%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+}
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Subtle paw paper texture for hero accents */
+.paper-grain {
+  background-image: radial-gradient(rgba(99, 153, 189, 0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Pill button */
+.btn-pill {
+  border-radius: 9999px;
+  padding: 0.85rem 1.6rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.01em;
+}
+.btn-pill:hover { transform: translateY(-1px); }
+.btn-primary { background-color: #6399BD; color: #FFFBF4; box-shadow: 0 8px 24px -10px rgba(99,153,189,0.65); }
+.btn-primary:hover { background-color: #4d85ab; box-shadow: 0 12px 28px -10px rgba(99,153,189,0.75); }
+.btn-outline { border: 1.5px solid #6399BD; color: #2a5777; background-color: transparent; }
+.btn-outline:hover { background-color: #BCD1D8; }
+
+/* Animations */
+@keyframes float-soft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.animate-float { animation: float-soft 6s ease-in-out infinite; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fade-up 0.8s ease-out both; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #FFFBF4; }
+::-webkit-scrollbar-thumb { background: #BCD1D8; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #6399BD; }
