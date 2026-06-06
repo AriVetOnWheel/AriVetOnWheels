@@ -9,8 +9,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-5">
-            <div className="bg-[#FFFBF4]/10 inline-flex rounded-2xl px-2 py-1.5">
-              <Logo />
+            <div className="bg-[#FFFBF4] inline-flex rounded-2xl px-4 py-3">
+              <Logo variant="large" />
             </div>
             <p className="mt-5 text-[#BCD1D8] leading-relaxed max-w-md">
               Veterinários ao domicílio em Sintra, Oeiras, Cascais, Moita, Montijo e Alcochete. Cuidamos do seu animal onde ele se sente em casa.

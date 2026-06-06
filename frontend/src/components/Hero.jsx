@@ -4,7 +4,7 @@ import { brand } from "../mock";
 
 export default function Hero({ onBook }) {
   return (
-    <section id="inicio" className="relative pt-32 md:pt-36 pb-16 md:pb-24 overflow-hidden">
+    <section id="inicio" className="relative pt-36 md:pt-40 pb-16 md:pb-24 overflow-hidden">
       {/* Soft background blobs */}
       <div className="absolute -top-20 -right-20 w-[480px] h-[480px] rounded-full bg-[#BCD1D8]/40 blur-3xl pointer-events-none" />
       <div className="absolute top-40 -left-32 w-[420px] h-[420px] rounded-full bg-[#FEEABE]/50 blur-3xl pointer-events-none" />

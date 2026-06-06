@@ -28,7 +28,7 @@ export default function Header({ onBook }) {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-5 md:px-8 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-5 md:px-8 h-24 flex items-center justify-between">
         <a href="#inicio" className="flex items-center">
           <Logo />
         </a>
